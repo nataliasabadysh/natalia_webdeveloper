@@ -13,6 +13,8 @@ This website serves as a central hub for my writings, projects, and ways to conn
   https://github.com/vercel/next.js/tree/canary/examples
   https://vercel.com/analytics
 
+  https://github.com/JamesIves/github-pages-deploy-action/blob/dev/.github/workflows/deploy.yml
+
 # Running Locally
 
 ```
