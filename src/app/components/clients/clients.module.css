@@ -1,0 +1,18 @@
+.title {
+  font-size: 3rem;
+  line-height: 1.25;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 3.75rem;
+    line-height: 1.25;
+  }
+}
+
+@media (min-width: 1024px) {
+  .title {
+    font-size: 8rem;
+    line-height: 1.25;
+  }
+}
