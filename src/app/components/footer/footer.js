@@ -4,7 +4,7 @@ const socialLinks = [{ platform: '', href: 'https://linkedin.com' }];
 
 export default function Footer() {
   return (
-    <footer className='container'>
+    <footer>
       <a>Logo</a>
 
       <section>

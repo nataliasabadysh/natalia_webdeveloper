@@ -21,8 +21,10 @@
   --breakpoint-tablet: 768px;
   --breakpoint-desktop: 1024px;
 }
+html {
+  min-width: 360px;
+}
 
-html,
 body {
   padding: 0;
   margin: 0;
@@ -37,6 +39,11 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+::selection {
+  background-color: #f3f047;
+  color: #000000;
 }
 
 *,
@@ -78,9 +85,9 @@ button:focus {
   outline: 1px dotted;
   outline: 5px auto -webkit-focus-ring-color;
 
-  /* background-image: none;
+  background-image: none;
   background-color: transparent;
-  font-weight: 600; */
+  font-weight: 600;
 }
 
 .container {

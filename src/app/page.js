@@ -6,23 +6,14 @@ import Clients from './components/clients/clients';
 import Projects from './components/projects/project';
 import Blog from './components/blog/blog';
 
-import Header from './components/header/header';
-import Footer from './components/footer/footer';
-
 export default function Home() {
   return (
-    <>
-      <Header />
-
-      <main className='container'>
-        <Banner />
-        <About />
-        <Clients />
-        <Projects />
-        <Blog />
-      </main>
-
-      <Footer />
-    </>
+    <main>
+      <Banner />
+      <About />
+      <Clients />
+      <Projects />
+      <Blog />
+    </main>
   );
 }

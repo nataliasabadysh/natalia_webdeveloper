@@ -1,5 +1,8 @@
 import './globals.css';
 import localFont from 'next/font/local';
+import { Analytics } from '@vercel/analytics/react';
+import Header from './components/header/header';
+import Footer from './components/footer/footer';
 
 const FixelDisplay = localFont({
   src: [
@@ -9,24 +12,31 @@ const FixelDisplay = localFont({
       style: 'normal',
     },
   ],
+  variable: '--font-FixelDisplay',
+  display: 'swap',
 });
 
 export const metadata = {
-  metadataBase: new URL('https://nextjs13-seo.vercel.app'),
+  // metadataBase: new URL('would be my domain '),
   title: {
-    default: 'Natalia',
-    template: `Software Developer`,
+    default: 'Natalia Sabadysh',
+    template: '%s | Natalia Sabadysh',
   },
-  description: 'Explore the latest posts from my travel blog.',
+  description: 'Developer, writer, and creator.',
   verification: {
-    google: 'google-site-verification=123123123',
+    google: '123',
   },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={FixelDisplay}>{children}</body>
+      <body className={`${FixelDisplay.variable} container`}>
+        <Header />
+        {children}
+        <Analytics />
+        <Footer />
+      </body>
     </html>
   );
 }

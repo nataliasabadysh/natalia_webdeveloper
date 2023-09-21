@@ -9,4 +9,13 @@ This website serves as a central hub for my writings, projects, and ways to conn
 
 ## Technologies Used
 
-- Next.js
+- Next.js lates version
+  https://github.com/vercel/next.js/tree/canary/examples
+  https://vercel.com/analytics
+
+# Running Locally
+
+```
+pnpm install
+pnpm dev
+```

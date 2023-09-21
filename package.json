@@ -10,9 +10,12 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.5.10",
+    "@vercel/analytics": "^1.0.2",
     "autoprefixer": "10.4.15",
     "eslint": "8.49.0",
     "eslint-config-next": "13.5.1",
+    "framer-motion": "^10.16.4",
     "next": "^13.5.2-canary.2",
     "normalize.css": "^8.0.1",
     "postcss": "8.4.30",
