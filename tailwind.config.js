@@ -12,6 +12,20 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      colors: {},
+      fontFamily: {
+        nn: ['var(--font-nn)'],
+        mr: ['var(--font-mr)'],
+      },
+      animation: {
+        roll: 'roll 24s linear infinite',
+      },
+      keyframes: {
+        roll: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+      },
     },
   },
   plugins: [],

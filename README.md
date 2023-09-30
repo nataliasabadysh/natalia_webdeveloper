@@ -15,6 +15,10 @@ This website serves as a central hub for my writings, projects, and ways to conn
 
   https://github.com/JamesIves/github-pages-deploy-action/blob/dev/.github/workflows/deploy.yml
 
+# SVG
+
+https://react-svgr.com/playground/
+
 # Running Locally
 
 ```

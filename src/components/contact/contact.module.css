@@ -1,0 +1,23 @@
+.container {
+  font-size: 3rem;
+  line-height: 1.2;
+  text-decoration: underline;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+}
+.container > button {
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    align-items: center;
+    justify-content: center;
+    font-size: 8rem;
+  }
+  .container > h2 {
+    width: 50%;
+    margin: 0 auto;
+  }
+}

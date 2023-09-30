@@ -1,8 +1,9 @@
 import './globals.css';
 import localFont from 'next/font/local';
+import { Manrope } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
-import Header from './components/header/header';
-import Footer from './components/footer/footer';
+import Header from '../components/header/header';
+import Footer from '../components/footer/footer';
 
 const FixelDisplay = localFont({
   src: [
@@ -12,8 +13,14 @@ const FixelDisplay = localFont({
       style: 'normal',
     },
   ],
-  variable: '--font-FixelDisplay',
+  variable: '--font-nn',
   display: 'swap',
+});
+
+const manrope = Manrope({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-mr',
 });
 
 export const metadata = {
@@ -31,7 +38,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${FixelDisplay.variable} container`}>
+      <body
+        suppressHydrationWarning={true}
+        className={`${FixelDisplay.variable} ${manrope.variable} font-nn`}
+      >
         <Header />
         {children}
         <Analytics />

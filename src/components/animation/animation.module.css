@@ -1,0 +1,15 @@
+.content {
+  grid-area: content;
+  animation: content 0.3s 0.3s both;
+}
+
+@keyframes content {
+  from {
+    opacity: 0;
+    transform: translateX(-2rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

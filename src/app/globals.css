@@ -5,35 +5,40 @@
 
 :root {
   --color-accent: #ffda0b;
+  --color-accent__secondary: #1a3af1;
 
   --background-color: #f3f4f6;
 
-  --text-color-dark: #333;
-  --text-color-light: #f3f4f6;
+  --mainTextColor: #000000;
+  --secendareTextColor: #333;
 
-  /* Typography */
+  --ligh-text__color: rgb(245, 245, 245);
+
   --base-font-size: 16px;
-  /* --font-family: 'Arial', sans-serif; */
+  --base-font-size: 16px;
 
   --base-spacing: 8px;
 
   --breakpoint-mobile: 480px;
   --breakpoint-tablet: 768px;
   --breakpoint-desktop: 1024px;
+
+  --border-radius: 40px;
+  --mainBorderRadius: 10px;
 }
 html {
   min-width: 360px;
+  scroll-behavior: smooth;
 }
 
 body {
   padding: 0;
-  margin: 0;
   font-size: 18px;
   line-height: 22px;
   letter-spacing: -0.015em;
-  background-color: #f3f4f6;
+  background-color: var(--background-color);
   color: #333;
-  font-family: 'non natural grotesk_trial version';
+  /* font-family: 'non natural grotesk_trial version'; */
 }
 
 a {
@@ -42,8 +47,8 @@ a {
 }
 
 ::selection {
-  background-color: #f3f047;
-  color: #000000;
+  background-color: var(--color-accent);
+  color: var(--mainTextColor);
 }
 
 *,
@@ -69,6 +74,19 @@ pre {
   margin: 0;
 }
 
+main {
+  /* padding-top: 150px; */
+  padding-left: 4.6875vw;
+  padding-right: 4.6875vw;
+}
+section {
+  padding: 20px 0;
+}
+
+svg {
+  display: inline-block;
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -79,27 +97,86 @@ button {
   background-color: transparent;
   background-image: none;
   font-weight: 600;
-}
-
-button:focus {
-  outline: 1px dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-
-  background-image: none;
-  background-color: transparent;
-  font-weight: 600;
+  border-radius: 40px;
+  text-decoration: none;
 }
 
 .container {
   width: 100%;
-  max-width: 1800px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+
+  max-width: 133.8rem;
+  padding-left: 50px;
+  padding-right: 50px;
   padding: 60px 20px;
 }
 
+.section_title {
+  font-size: 4rem;
+  line-height: 1;
+  margin: 10px 0;
+}
+
+.btn {
+  min-width: 100px;
+  height: 2.5em;
+  padding: 0 20px;
+  border-radius: 50px;
+  border: 1px solid black;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  display: flex;
+  text-transform: uppercase;
+  transition: 0.2s transform ease-in-out;
+  will-change: transform;
+  overflow: hidden;
+}
+
+.btn::after {
+  background-color: var(--color-accent__secondary);
+  border-radius: 3rem;
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-100%, 0) rotate(10deg);
+  transform-origin: top left;
+  transition: 0.1s transform ease-out;
+  will-change: transform;
+  z-index: -1;
+}
+
+.btn:hover::after {
+  transform: translate(0, 0);
+}
+
+.btn:hover {
+  border: 2px solid transparent;
+  color: #f3f4f6;
+  transform: scale(1.05);
+  will-change: transform;
+}
+
 @media (min-width: 768px) {
+  section {
+    padding: 120px 0;
+  }
+
   .container {
     padding: 80px 20px;
+  }
+  .section_title {
+    font-size: 8rem;
+    margin: 40px 0;
+  }
+  .btn {
+    width: 200px;
+    height: 3.5em;
   }
 }
 
@@ -113,4 +190,58 @@ button:focus {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.animate-roll {
+  animation: roll 24s linear infinite;
+}
+
+.loading {
+  position: fixed;
+  z-index: 999;
+  overflow: show;
+  background: var(--background-color);
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100wh;
+  font-size: 10rem;
+}
+
+.loading:after {
+  content: ' .';
+  animation: dots 1s steps(5, end) infinite;
+}
+
+@keyframes dots {
+  0%,
+  20% {
+    color: rgba(0, 0, 0, 0);
+    text-shadow:
+      0.25em 0 0 rgba(0, 0, 0, 0),
+      0.5em 0 0 rgba(0, 0, 0, 0);
+  }
+  40% {
+    color: white;
+    text-shadow:
+      0.25em 0 0 rgba(0, 0, 0, 0),
+      0.5em 0 0 rgba(0, 0, 0, 0);
+  }
+  60% {
+    text-shadow:
+      0.25em 0 0 white,
+      0.5em 0 0 rgba(0, 0, 0, 0);
+  }
+  80%,
+  100% {
+    text-shadow:
+      0.25em 0 0 white,
+      0.5em 0 0 white;
+  }
 }

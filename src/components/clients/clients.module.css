@@ -1,0 +1,55 @@
+.list_companies {
+  width: 100%;
+  margin: 0;
+
+  flex-wrap: wrap;
+}
+
+.list_companies > li {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+
+  flex-basis: calc(100% / 4 - 20px);
+
+  margin-left: 40px;
+  margin-top: 40px;
+}
+
+.list_companies > li > img {
+  width: 80px;
+}
+
+.title {
+  font-size: 3rem;
+  line-height: 1.25;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 3.75rem;
+    line-height: 1.25;
+  }
+
+  .list_companies {
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    justify-content: center;
+    /* flex-basis: calc(100% / 9 - 20px); */
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+
+  .list_companies > li > img {
+    width: 150px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .title {
+    font-size: 8rem;
+    line-height: 1.25;
+  }
+}

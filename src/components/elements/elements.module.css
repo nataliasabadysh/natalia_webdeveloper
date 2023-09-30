@@ -1,0 +1,43 @@
+.container {
+  background-color: var(--background-color);
+  z-index: 1000;
+  width: 120px;
+  height: 120px;
+  border-radius: 100vw;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 5px;
+}
+
+.bg {
+  background-color: var(--color-accent__secondary);
+  border-radius: 100vw;
+  display: flex;
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  border-radius: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact_hand__img {
+  position: absolute;
+}
+
+.rotate {
+  animation: loading 11s linear infinite;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
