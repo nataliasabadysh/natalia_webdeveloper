@@ -10,7 +10,7 @@ jobs:
     concurrency:
       group: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
       cancel-in-progress: true # Stop anything already running and run with latest code for current branch
-    container: ghcr.io/natalia_webdeveloper/build-env/base:0.0.4
+    container: ghcr.io/natalia_webdeveloper/build-env/base:0.0.1
     runs-on: [self-hosted, linux, normal]
     steps:
       - name: Checkout 🛎
