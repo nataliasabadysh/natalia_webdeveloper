@@ -1,24 +1,35 @@
 name: Build and deploy to GitHub Pages
 
+name: Build and Deploy
 on:
   push:
-    branches: [main]
-
+    branches:
+      - master
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+    concurrency:
+      group: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
+      cancel-in-progress: true # Stop anything already running and run with latest code for current branch
+    container: ghcr.io/natalia_webdeveloper/build-env/base:0.0.4
+    runs-on: [self-hosted, linux, normal]
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v2.3.1
-
-      - name: Install, lint, build 🔧
-        run: |
-          npm install
-          npm run lint:js
-          npm run build
-
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.0
+      - name: Checkout 🛎
+        uses: actions/checkout@v3
         with:
-          branch: gh-pages
-          folder: build
+          ref: master
+      - name: Install nodejs 18
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18
+      - name: Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
+        run: |
+          corepack enable
+          yarn install
+          yarn build
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4.3.3
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: out # The folder the action should deploy.
+          clean: true
+          single-commit: true

@@ -11,11 +11,6 @@ export const useLoader = () => {
     }, 1000);
   }, []);
 
-  // useEffect(()=> {
-  //   loaded ? document.querySelector('body').classList.add('loading')
-  //   : document.querySelector('body').classList.remove('loading')
-  // }, [loaded])
-
   const spinner_element = <div class="">loading ....</div>;
 
   return {

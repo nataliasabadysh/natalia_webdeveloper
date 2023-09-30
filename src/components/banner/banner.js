@@ -5,14 +5,15 @@ export default function Banner() {
     <>
       <section className={styles.contaier}>
         <div className={styles.title}>
-          <h1> Software Developer </h1>
+          <h2>Software</h2>
+          <h2>Developer </h2>
         </div>
 
         <div className={styles.description}>
-          <p>
+          <h1>
             Your Complexity, My Specialty. <br />
             I’m not just your developer but your companion.
-          </p>
+          </h1>
         </div>
       </section>
     </>
