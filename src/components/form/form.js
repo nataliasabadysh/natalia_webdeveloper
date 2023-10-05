@@ -15,7 +15,7 @@ export const Form = () => {
 
   return (
     <div className={styles.container}>
-      <h3 className={styles.title}>Let's build project together!</h3>
+      <h3 className={styles.title}>Let&apos;s build project together!</h3>
 
       {!toggle && (
         <Formik

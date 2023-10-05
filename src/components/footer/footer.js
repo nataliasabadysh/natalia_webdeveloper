@@ -55,8 +55,11 @@ export default function Footer() {
       </section>
 
       <div className={styles.footer_container}>
-        <span className={styles.copyright}> copyright &copy; 2023</span>
+      {/* Designed & developed with ♥️ by Hima Patel */}
+        {/* <span className={styles.copyright}> copyright &copy; 2023</span> */}
+        <span className={styles.copyright}>  designed & developed with ♥️ by Natalia Sabadysh</span>
       </div>
     </footer>
   );
 }
+

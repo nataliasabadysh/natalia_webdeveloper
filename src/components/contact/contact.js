@@ -4,7 +4,7 @@ import Button from '../elements/button';
 export default function Contact({ onClick }) {
   return (
     <section className={styles.container}>
-      <h2>Let's work together</h2>
+      <h2>Let&apos;s work together</h2>
       <br />
       <Button onClick={onClick} name="contact me" />
     </section>
