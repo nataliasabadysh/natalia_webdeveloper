@@ -13,7 +13,8 @@ export default function Header() {
   );
 }
 
-{/* <h4 class="wordCarousel">
+{
+  /* <h4 class="wordCarousel">
     <span>Word swipe animation: </span>
     <div>
         <!-- Use classes 2,3,4, or 5 to match the number of words -->
@@ -25,4 +26,5 @@ export default function Header() {
             <li>Cunsalt</li>
         </ul>
     </div>
-</h4> */}
+</h4> */
+}

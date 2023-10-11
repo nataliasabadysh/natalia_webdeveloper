@@ -10,38 +10,17 @@ const initialValues = {
   message: '',
 };
 
-const URL = 'https://eoai0a4rjd3b1j6.m.pipedream.net';
-
 export const Form = () => {
   const [toggle, setToggle] = useState(false);
-  const [loader, setLoader] = useState(false);
-  const [error, setError] = useState(false);
 
-  const send = async body => {
+  const send = body => {
     const options = {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      headers,
       mode: 'cors',
       body: JSON.stringify(body),
     };
-    setLoader(true);
-    try {
-      const response = await fetch(URL, options);
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
-
-      const result = await response.json();
-      return result;
-    } catch (error) {
-      setError(error);
-      throw error;
-    } finally {
-      setLoader(false);
-    }
+    fetch('https://eoai0a4rjd3b1j6.m.pipedream.net', options);
   };
 
   return (

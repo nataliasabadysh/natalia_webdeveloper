@@ -12,7 +12,6 @@
 
   /* transform: translate(-50%, -50%) translate( calc(50vw + 1px), calc(50vh + 1px)); */
   /* https://codepen.io/team/keyframers/pen/jRaLgX */
-
 }
 .description {
   font-size: 16px;
@@ -25,7 +24,6 @@
   top: 60px;
   font-size: 30px;
 }
-
 
 @media (min-width: 768px) {
   .title {
@@ -47,17 +45,20 @@
 }
 
 .title > h2 {
-  animation: inner-left 1s 1s ease both, text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+  animation:
+    inner-left 1s 1s ease both,
+    text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
 }
 
 .description > h1 {
-  animation: inner-left 1s 1s ease both, text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+  animation:
+    inner-left 1s 1s ease both,
+    text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
 }
 
 @keyframes text-clip {
   from {
     clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
-
   }
   to {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
