@@ -1,7 +1,9 @@
 import { Formik, Field } from 'formik';
 import { validationSchema } from './validation';
-import styles from './form.module.css';
 import { useState } from 'react';
+import UIInput from '../input/UIInput';
+import UIButton from '../button/UIButton';
+import { Container, FormRow, Title, StyledForm, Error } from './form.styles';
 
 const initialValues = {
   name: '',
@@ -45,8 +47,8 @@ export const Form = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <h3 className={styles.title}>Let&apos;s build project together!</h3>
+    <Container>
+      <Title>Let&apos;s build project together!</Title>
 
       {!toggle && (
         <Formik
@@ -58,84 +60,67 @@ export const Form = () => {
           }}
         >
           {({ errors, touched, handleSubmit }) => (
-            <form onSubmit={handleSubmit} className={styles.form}>
-              <div className={styles.form_row}>
-                <label htmlFor="name" className={styles.label}>
-                  What is your name?*
-                </label>
-                <Field
+            <StyledForm>
+              <FormRow>
+                <UIInput
+                  label="What is your name?*"
                   type="text"
                   name="name"
                   placeholder="First Name"
                   aria-required="true"
                   aria-describedby="nameDesc"
-                  className={styles.input}
                 />
-                {errors.name && touched.name && (
-                  <div className={styles.error}>{errors.name}</div>
-                )}
-              </div>
 
-              <div className={styles.form_row}>
-                <label htmlFor="name" className={styles.label}>
-                  Phone number?*
-                </label>
-                <Field
+                {errors.name && touched.name && <Error>{errors.name}</Error>}
+              </FormRow>
+
+              <FormRow>
+                <UIInput
+                  label="What is your phone?*"
                   type="text"
                   name="phone"
                   placeholder="First Name"
                   aria-required="true"
                   aria-describedby="phoneDesc"
-                  className={styles.input}
                 />
-                {errors.phone && touched.phone && (
-                  <div className={styles.error}>{errors.phone}</div>
-                )}
-              </div>
 
-              <div className={styles.form_row}>
-                <label htmlFor="email" className={styles.label}>
-                  E-mail*
-                </label>
-                <Field
+                {errors.phone && touched.phone && <Error>{errors.phone}</Error>}
+              </FormRow>
+
+              <FormRow>
+                <UIInput
+                  label="What is your E-mail?*"
                   name="email"
                   type="email"
-                  placeholder="Email"
+                  placeholder="Your Email"
                   aria-required="true"
                   aria-describedby="emailDesc"
-                  className={styles.input}
                 />
-                {errors.email && touched.email && (
-                  <div className={styles.error}>{errors.email}</div>
-                )}
-              </div>
+                {errors.email && touched.email && <Error>{errors.email}</Error>}
+              </FormRow>
 
-              <div className={styles.form_row}>
-                <label htmlFor="message" className={styles.label}>
-                  A few words about your project*
-                </label>
-                <Field
+              <FormRow>
+                <UIInput
+                  label="A few words about your project*"
                   name="message"
                   type="text"
                   placeholder="Message"
                   component="textarea"
                   aria-required="true"
-                  aria-describedby="messageDesc"
-                  className={styles.textarea}
+                  aria-describedby="emailDesc"
                 />
-                {errors.message && touched.message && (
-                  <div className={styles.error}>{errors.message}</div>
-                )}
-              </div>
 
-              <button type="submit" className={styles.btn}>
-                Send
-              </button>
-            </form>
+                {errors.message && touched.message && (
+                  <Error>{errors.message}</Error>
+                )}
+              </FormRow>
+
+              <UIButton label="Send" type="submit" />
+            </StyledForm>
           )}
         </Formik>
       )}
       {toggle && <p>Thank you, I sed you email! </p>}
-    </div>
+    </Container>
   );
 };

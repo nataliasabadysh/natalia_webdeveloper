@@ -1,7 +1,5 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import styles from './tech.module.css';
-import { SVG } from '../../app/svg';
+import { ViewCard } from './ViewCard';
+import { Container, Section, Element } from './Tech.styles';
 
 const content = {
   about:
@@ -17,6 +15,7 @@ const content = {
         desc: 'Frontend / backend ',
         years: '+ 6 years',
         color: '#FFCC4A',
+        url: 'https://nataliasabadysh.gitbook.io/js/',
       },
       {
         title: 'python',
@@ -25,6 +24,7 @@ const content = {
         desc: 'Frontend / backend ',
         years: '+ 6 years',
         color: '#87ADCD',
+        url: 'https://nataliasabadysh.gitbook.io/python/',
       },
       // {
       //   title: 'sql',
@@ -41,14 +41,15 @@ const content = {
       //   years: '+ 6 years',
       //   color: '#',
       // },
-      // {
-      //   title: 'TypeScript',
-      //   button: null,
-      //   items: ['libraries', 'tools', 'pet projects', 'valontues'],
-      //   desc: 'Frontend / backend ',
-      //   years: '+ 6 years',
-      //   color: '#TypeScript',
-      // },
+      {
+        title: 'TypeScript',
+        button: null,
+        items: ['libraries', 'tools', 'pet projects', 'valontues'],
+        desc: 'Frontend / backend ',
+        years: '+ 6 years',
+        color: '#TypeScript',
+        url: 'https://nataliasabadysh.gitbook.io/web-developing/typescript/typescript-core',
+      },
       {
         title: 'React',
         button: null,
@@ -56,6 +57,7 @@ const content = {
         desc: 'Frontend / backend ',
         years: '+ 6 years',
         color: '#557EE4',
+        url: 'https://nataliasabadysh.gitbook.io/web-developing/typescript/typescript-core',
       },
       {
         title: 'GraphQL',
@@ -64,44 +66,28 @@ const content = {
         desc: 'Frontend / backend ',
         years: '+ 6 years',
         color: '#CC46A2',
+        url: 'https://nataliasabadysh.gitbook.io/graphql/',
       },
     ],
   },
 };
 
-const ViewCard = ({ name = '', color = '' }) => {
-  const bg = { backgroundColor: color };
-
+function Tech() {
   return (
-    <div className={styles.view_card_wrapper}>
-      <div className={styles.card_container} style={bg}>
-        <span className={styles.card_name}>{name}</span>
-        <span className={styles.card_name}>{name}</span>
-        <span className={styles.card_name}>{name}</span>
-        <span className={styles.card_name}>{name}</span>
-      </div>
-      {/* <Link href={'/url/url'} className={styles.btn}>
-        read more
-        <span>{SVG.arrow}</span>
-      </Link> */}
-    </div>
-  );
-};
-
-export default function Tech() {
-  return (
-    <section>
+    <Section>
       <div>
         <h2 className="section_title">tech stack:</h2>
       </div>
 
-      <ul className={styles.container}>
+      <Container>
         {content.tech_skills.list.map((item, index) => (
-          <li className={styles.element} key={index}>
-            <ViewCard name={item.title} color={item.color} />
-          </li>
+          <Element key={index}>
+            <ViewCard name={item.title} color={item.color} url={item.url} />
+          </Element>
         ))}
-      </ul>
-    </section>
+      </Container>
+    </Section>
   );
 }
+
+export default Tech;

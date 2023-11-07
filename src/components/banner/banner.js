@@ -1,21 +1,21 @@
-import styles from './banner.module.css';
+import { Container, Title, Content } from './banner.styles';
 
 export default function Banner() {
   return (
     <>
-      <section className={styles.contaier}>
-        <div className={styles.title}>
-          <h2>Software</h2>
-          <h2>Developer </h2>
-        </div>
-
-        <div className={styles.description}>
-          <h1>
-            Your Complexity, My Specialty. <br />
-            I’m not just your developer but your companion.
-          </h1>
-        </div>
-      </section>
+      <Container>
+        <Title>
+          {' '}
+          <h1>Software Developer</h1>
+        </Title>
+        <Content>
+          <p className="slogan">Your Complexity, My Specialty.</p>
+          <p className="description">
+            I'm not just your developer but your companion.
+          </p>
+        </Content>
+        {/* <BinaryCode>110101001</BinaryCode> */}
+      </Container>
     </>
   );
 }

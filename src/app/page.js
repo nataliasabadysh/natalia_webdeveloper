@@ -18,6 +18,7 @@ import { Animation } from '../components/animation/animation';
 
 // hooks
 import { useLoader } from '../hooks/useLoadeer';
+import { PhotoGallery } from '../components/gallery/GalleryContainer';
 
 export default function Home() {
   const [loaded, setLoaded] = useState(false);
@@ -58,6 +59,7 @@ export default function Home() {
         <Projects />
 
         <HobbyList />
+        <PhotoGallery />
         <Tech />
 
         <Contact onClick={openModal} />

@@ -162,6 +162,17 @@ button {
   will-change: transform;
 }
 
+/* .btn {
+  /* Shared styles for button and anchor */
+
+/* .btn-primary {
+  background-color: #1a3af1;
+}
+
+.btn-small, .btn-medium, .btn-large {
+  background-color: #1a8df1a5;
+} */
+
 @media (min-width: 768px) {
   section {
     padding: 120px 0;
@@ -244,4 +255,14 @@ button {
       0.25em 0 0 white,
       0.5em 0 0 white;
   }
+}
+
+.gallery {
+  width: 100%;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.gallery:hover {
+  transform: scale(1.1);
 }

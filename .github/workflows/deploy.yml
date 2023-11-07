@@ -2,26 +2,26 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - master  # Change to your branch name
+      - master # Change to your branch name
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
 
-    - name: Install Dependencies
-      run: npm install  # Use yarn if you prefer
+      - name: Install Dependencies
+        run: npm install # Use yarn if you prefer
 
-    - name: Build
-      run: npm run build  # Use yarn if you prefer
+      - name: Build
+        run: npm run build # Use yarn if you prefer
 
-    - name: Export
-      run: npm run export  # Use yarn if you prefer, and make sure you have the export script in your package.json
+      - name: Export
+        run: npm run export # Use yarn if you prefer, and make sure you have the export script in your package.json
 
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./out
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
