@@ -75,10 +75,6 @@ const content = {
 function Tech() {
   return (
     <Section>
-      <div>
-        <h2 className="section_title">tech stack:</h2>
-      </div>
-
       <Container>
         {content.tech_skills.list.map((item, index) => (
           <Element key={index}>

@@ -60,6 +60,10 @@ export default function Home() {
 
         <HobbyList />
         <PhotoGallery />
+        <div>
+          <h2 className="section_title">tech stack:</h2>
+        </div>
+
         <Tech />
 
         <Contact onClick={openModal} />

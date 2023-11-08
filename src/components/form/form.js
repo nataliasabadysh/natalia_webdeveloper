@@ -1,8 +1,8 @@
 import { Formik, Field } from 'formik';
 import { validationSchema } from './validation';
 import { useState } from 'react';
-import UIInput from '../input/UIInput';
-import UIButton from '../button/UIButton';
+import UIInput from '../ui/input/Input';
+import UIButton from '../ui/button/Button';
 import { Container, FormRow, Title, StyledForm, Error } from './form.styles';
 
 const initialValues = {

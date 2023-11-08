@@ -5,9 +5,9 @@ import {
   StyledLabel,
   StyledInput,
   StyledError,
-} from './UIInput.styles'; // The file where you've saved the styled components
+} from './Input.styles'; // The file where you've saved the styled components
 
-const UIInput = ({ label, ...props }) => {
+const Input = ({ label, ...props }) => {
   const [field, meta] = useField(props);
   return (
     <StyledFormRow>
@@ -20,4 +20,4 @@ const UIInput = ({ label, ...props }) => {
   );
 };
 
-export default UIInput;
+export default Input;

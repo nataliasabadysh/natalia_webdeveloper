@@ -1,9 +1,9 @@
 'use client';
 
 import React from 'react';
-import { ButtonStyle, LinkStyle } from './UIButton.styles';
+import { ButtonStyle, LinkStyle } from './Button.styles';
 
-const UIButton = ({
+const Button = ({
   primary,
   backgroundColor,
   size,
@@ -29,10 +29,14 @@ const UIButton = ({
   }
 
   return (
-    <ButtonStyle onClick={onClick} style={{ backgroundColor }}>
+    <ButtonStyle
+      onClick={onClick}
+      style={{ backgroundColor }}
+      data-testid="btn"
+    >
       {label || 'default value'}
     </ButtonStyle>
   );
 };
 
-export default UIButton;
+export default Button;

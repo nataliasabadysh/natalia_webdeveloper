@@ -1,3 +1,5 @@
+import { globalDecorators } from './decorators';
+
 /** @type { import('@storybook/react').Preview } */
 const preview = {
   parameters: {
@@ -8,6 +10,8 @@ const preview = {
         date: /Date$/i,
       },
     },
+    // extra styles
+    // decorators: globalDecorators
   },
 };
 

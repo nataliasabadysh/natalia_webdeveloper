@@ -4,11 +4,18 @@ import { ViewCard } from './ViewCard';
 export default {
   title: 'Components/TechItem',
   component: ViewCard,
+  parameters: {
+    design: {
+      type: 'figspec',
+      url: 'https://www.figma.com/file/MKP2JuetmatrxFegnWrLPH/Natalia-Sabadysh---Projector?type=design&node-id=2650-11&mode=design&t=1pBBAjko1XqJpIdH-4',
+    },
+  },
 };
 
 const Template = args => <ViewCard {...args} />;
 
 export const Default = Template.bind({});
+
 Default.args = {
   name: 'Sample Card',
   color: '#bada55',

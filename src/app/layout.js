@@ -4,6 +4,7 @@ import { Manrope } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
 import Header from '../components/header/header';
 import Footer from '../components/footer/footer';
+// import {GlobalStyle} from './GlobalStyle';
 
 const FixelDisplay = localFont({
   src: [
@@ -43,6 +44,7 @@ export default function RootLayout({ children }) {
         className={`${FixelDisplay.variable} ${manrope.variable} font-nn`}
       >
         <Header />
+        {/* <GlobalStyle /> */}
         {children}
         <Analytics />
         <Footer />

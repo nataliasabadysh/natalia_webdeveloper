@@ -60,6 +60,8 @@ export const Button = styled.a`
   bottom: 2%;
   left: 10%;
   color: white;
+  font-size: 18px;
+  text-transform: uppercase;
 `;
 
 export const ViewCardWrapper = styled.div`

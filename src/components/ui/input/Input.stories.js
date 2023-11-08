@@ -1,11 +1,11 @@
 import React from 'react';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
-import UIInput from './UIInput';
+import Input from './Input';
 
 export default {
-  title: 'Style Guide/UIInput',
-  component: UIInput,
+  title: 'Style Guide/Input',
+  component: Input,
   excludeStories: /.*Data$/,
 };
 
@@ -26,7 +26,7 @@ const Template = args => (
   >
     {formik => (
       <Form>
-        <UIInput {...args} />
+        <Input {...args} />
       </Form>
     )}
   </Formik>

@@ -38,7 +38,6 @@ body {
   letter-spacing: -0.015em;
   background-color: var(--background-color);
   color: #333;
-  /* font-family: 'non natural grotesk_trial version'; */
 }
 
 a {
@@ -265,4 +264,14 @@ button {
 
 .gallery:hover {
   transform: scale(1.1);
+}
+
+.react-select__control > .react-select__value-container {
+  border: none;
+  background-color: red;
+}
+
+.react-select__control {
+  border: none;
+  background-color: yellow;
 }

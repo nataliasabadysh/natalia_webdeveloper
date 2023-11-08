@@ -1,6 +1,6 @@
 import { Navigation } from '../navigation/navigation';
 import styles from './header.module.css';
-import UIButton from '../button/UIButton';
+import UIButton from '../ui/button/Button';
 
 export default function Header({ backgroundColor }) {
   return (
