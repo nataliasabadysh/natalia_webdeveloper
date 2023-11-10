@@ -11,7 +11,7 @@ export default {
 
 export const Default = () => (
   <LinkStyle
-    href="https://drive.google.com/file/d/1nIUuQNFWVcjX2Dne9_Tstd69AlhZ7l3E/view?usp=sharing"
+    href="https://examplle.com"
     target="_blank"
     rel="noopener noreferrer"
     className="btn"
