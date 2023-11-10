@@ -3,7 +3,6 @@ import UIButton from './Button';
 import { LinkStyle } from './Button.styles';
 import { userEvent, within } from '@storybook/testing-library';
 import { expect, screen } from '@storybook/jest';
-// import { getByTestId } from '@testing-library/react';
 
 export default {
   title: 'Style Guide/Button',
